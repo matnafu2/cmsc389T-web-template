@@ -9,7 +9,24 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: #a1e3c5;
 }
+
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color:  black;
+    border-width:5px;
+    width: 5%;
+  }
+
+a:hover{
+    width: 20%;
+    background-color: blue
+  } 
+img:hover{ 
+    zoom: 1.2;
+}  
 
 .nav ul {
     margin: 0;
