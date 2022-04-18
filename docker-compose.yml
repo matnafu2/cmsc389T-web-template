@@ -12,14 +12,14 @@ services:
     networks:
       - app-network
   
-  #the nginx configuration is given below
+#the nginx configuration is given below
   #the website will run on localhost:80 
   webserver:
     image: nginx:mainline-alpine
     container_name: webserver
     restart: unless-stopped
     ports:
-      - "80"
+      - "80:80"
     volumes:
       - web-root:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
@@ -34,7 +34,7 @@ volumes:
     driver_opts:
       type: none
       #fill out your absolute path to your folder here
-      device: "C:/Users/miki/Desktop/UMD/SPRING 2022/CMSC389T(Git & Github)/cmsc389T-web-template"
+      device: C:/Users/miki/Desktop/UMD/SPRING 2022/CMSC389T(Git & Github)/cmsc389T-web-template
       #device: /absolute/path/to/web/template/folder
       o: bind
 
